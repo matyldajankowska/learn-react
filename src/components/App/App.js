@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './App.scss';
 import List from '../List/List.js';
 
-
 class App extends React.Component {
   render() {
     return (
@@ -13,8 +12,8 @@ class App extends React.Component {
           <p>I'm planning on doing all these things sooner, rather than later!</p>
       </List>
     </main>
-  )
-}
-}
+    );
+  };
+};
 
 export default App;
