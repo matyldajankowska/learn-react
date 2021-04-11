@@ -18,36 +18,35 @@ class Column extends React.Component {
         icon: PropTypes.node,
       };
 
-      addCard(title){
-        this.setState(state => (
-          {
-            cards: [
-              ...state.cards,
-                  {
-                    key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-                    title,
-                  }
-                ]
-            }
-        ));
-      }
-      
-      render(){
-        return(
-            <section className={styles.component}>
-                <h3 className={styles.title}><span className={styles.icon}><Icon name={this.props.icon}/></span>{this.props.title}</h3>
+    addCard(title){
+      this.setState(state => (
+        {
+          cards: [
+            ...state.cards,
+                {
+                  key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+                  title,
+                }
+              ]
+          }
+      ));
+    }
+    
+    render(){
+      return(
+          <section className={styles.component}>
+              <h3 className={styles.title}><span className={styles.icon}><Icon name={this.props.icon}/></span>{this.props.title}</h3>
               <div>
                 {this.state.cards.map(({key, ...cardProps}) => (
-                <Card key={key} {...cardProps} />
+                  <Card key={key} {...cardProps} />
                 ))}
               </div>  
               <div>
                 <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
-              
               </div>
-            </section>
-          )        
-      }
-  }
-  
-  export default Column;
+          </section>
+        )        
+    }
+}
+
+export default Column;
