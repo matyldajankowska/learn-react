@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
+import { settings } from '../../data/dataStore';
 
 
 class Column extends React.Component {
     static propTypes = {
-        titleColumn: PropTypes.node,
+        columnTitle: PropTypes.node,
     };
     render(){
         return(
             <section className={styles.component}>
-                <h3 className={styles.title}>{this.props.titleColumn}</h3>
+                <h3 className={styles.title}>{this.props.columnTite}</h3>
             </section>
         );        
     };
