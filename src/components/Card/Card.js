@@ -5,7 +5,7 @@ import {settings, listData} from './../../data/dataStore.js';
 
 class Card extends React.Component {
     static propTypes = {
-        title: PropTypes.node,
+        title: PropTypes.string,
     }
   
   render(){
