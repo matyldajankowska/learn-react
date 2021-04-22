@@ -4,7 +4,7 @@ import {getCardsForColumn} from '../../redux/cardsRedux.js';
 import {createActionAddCard} from '../../redux/cardsRedux.js';
 
 const mapStateToProps = (state, props) => ({
-  cards: getCardsForColumn(state, props.id, ),
+  cards: getCardsForColumn(state, props.id, state.searchString ),
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
